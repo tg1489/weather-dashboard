@@ -1,0 +1,62 @@
+body {
+    background-color: rgb(57, 57, 209);
+    color:white;
+  
+  }
+  
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  
+  
+  div.card-1 {
+    background-color: rgba(50, 23, 101, 0.708);
+    border-radius: 10px;
+  
+  
+  }
+  
+  div.card-2 {
+    background-color: rgba(50, 23, 101, 0.708);
+    border-radius: 10px;
+    /* padding: 21px 0; */
+  }
+  
+  div.card-3 {
+  
+  }
+  
+  div.card-4 {
+    background-color: rgba(0, 0, 0, 0.646);
+  }
+  
+  .d-flex {
+    display: flex!important;
+    flex-direction: column;
+  }
+  
+  #weather-icon {
+    width: 3rem;
+    height: 3rem;
+  }
+  
+  
+  
+  
+  .row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+    justify-content: space-evenly;
+  }
+  
+  .row-card-1 {
+    border-radius: 10px;
+    background-color: rgba(85, 85, 85, 0.65);
+  }
+  
+  

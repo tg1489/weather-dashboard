@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Dashboard</title>
+  <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp"
+    crossorigin="anonymous"
+  />
+
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+
+<body>
+<div
+  id="weather-dashboard"
+  class="container badge d-flex justify-content-center align-items-center"
+>
+  <h1>Weather Dashboard &nbsp; <small class="text-muted">API</small></h1>
+</div>
+
+<!-- Container -->
+<div id="main-div" class="container text-lg-start fw-bold">
+  <!-- Row -->
+  <div class="row row-cols-2 gx-5">
+    <!-- Col -->
+    <div
+      id="div-search-input"
+      class="col card-1 d-flex justify-content-center align-items-center shadow-lg"
+    >
+      <!-- Enter City: -->
+      <form>
+        <label for="search">Enter City: </label>
+        <input id="search" name="search" type="text" />
+        <button
+          id="btn"
+          title="btn-title"
+          value="btn-search"
+          aria-label="Name"
+          type="submit"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+
+    <!-- Current Results -->
+    <div id="parent-results" class="col">
+      <div
+        id="results"
+        class="card-2 py-4 d-flex justify-content-center align-items-center shadow-lg text-center"
+      ><h3 id="h3-id" class="text-center"></h3></div>
+    </div>
+  </div>
+  <br /><br />
+
+    <!-- 5 Day Results -->
+  <div id="5-day"></div><br><br>
+
+<!-- Search History -->
+  <div id="search-history-container" class="text-center">
+    <div
+      id="history-id"
+      class="search-history col-2 justify-content-center align-items-center shadow-lg text-center"
+    ></div>
+    <br />
+  </div>
+
+
+
+
+
+<!-- JavaScript -->
+
+<script
+  src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1.10.6/dayjs.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+  integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+  integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+  crossorigin="anonymous"
+></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="assets/script2.js"></script>
+</body>
+</html>
