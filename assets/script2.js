@@ -17,7 +17,7 @@ $(function () {
         const
             apiKey = "6513fb31ba384f9391f06324986c1880",
             city = search.val(),
-            url = `http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
+            url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`;
 
         // Api Fetch
         fetch(url)
@@ -123,7 +123,7 @@ $(function () {
         // storageCity = localStorage.key(e);
 
 
-      url = `http://api.openweathermap.org/data/2.5/forecast?q=${cityClickedOn}&appid=${apiKey}`;
+      url = `https://api.openweathermap.org/data/2.5/forecast?q=${cityClickedOn}&appid=${apiKey}`;
 
       fetch(url)
         .then(res => res.json())
