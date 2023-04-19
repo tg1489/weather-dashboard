@@ -1,6 +1,5 @@
 $(function () {
 
-
     const
         results = $("#results"), // Displays results
         search = $("#search"), // Search input field
@@ -15,6 +14,7 @@ $(function () {
     $("#btn").on("click", (e) => {
         e.preventDefault();
         $('div.card-2').css('padding', '21px 0')
+        
         const
             apiKey = "6513fb31ba384f9391f06324986c1880",
             city = search.val(),
@@ -25,10 +25,7 @@ $(function () {
         .then(res => res.json())
         .then((data) => {
 
-
-
             let
-
                 cityID = data.city.id, // City ID
                 cityName = data.city.name, // City Name
                 todaysDate = dateConverter(data.list[4].dt_txt.slice(0,10)),  // Current Date
@@ -66,23 +63,15 @@ $(function () {
 
 
           // Check if data already exists in localStorage
-          let isDuplicate = false;
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
+          const isDuplicate = Object.keys(localStorage).some(key => {
             const data = JSON.parse(localStorage.getItem(key));
-            if (data.cityID === cityID) {
-              isDuplicate = true;
-              break;
-            }
-          }
+            return data.cityID === cityID;
+          });
+          
 
           if (!isDuplicate) {
             // Add data to localStorage
-            localStorage.setItem(`city-${id}`, JSON.stringify({
-              cityID: cityID,
-              cityName: cityName,
-              todaysDate: todaysDate
-            }));
+            localStorage.setItem(`city-${id}`, JSON.stringify({cityID, cityName,todaysDate}));
           }
 
         })
