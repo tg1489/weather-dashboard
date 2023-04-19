@@ -1,6 +1,6 @@
 $(function () {
 
-  localStorage.removeItem('Test')
+
     const
         results = $("#results"), // Displays results
         search = $("#search"), // Search input field
@@ -25,7 +25,7 @@ $(function () {
         .then(res => res.json())
         .then((data) => {
 
-
+console.log(data);
 
             let
 
