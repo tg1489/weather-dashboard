@@ -1,5 +1,6 @@
 $(function () {
 
+  localStorage.removeItem('Test')
     const
         results = $("#results"), // Displays results
         search = $("#search"), // Search input field
@@ -114,8 +115,6 @@ $(function () {
   // Search History Click Event
   historyEl.click((e) => {
     let cityClickedOn = e.target.childNodes[0].data;
-
-    console.log(historyEl.children())
 
     if (historyEl.children().length > 0) {
       const
